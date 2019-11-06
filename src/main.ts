@@ -8,10 +8,15 @@ import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './app/material-module';
-
+import { AppRoutingModule } from "./app/app-routing.module";
+import { DragDropBasicComponent } from "./app/drag-drop-basic/drag-drop-basic.component";
+import { DragDropOrderedListComponent } from "./app/drag-drop-ordered-list/drag-drop-ordered-list.component";
 import {CdkDragDropOverviewExample} from './app/cdk-drag-drop-overview-example';
 
+
+
 @NgModule({
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -20,9 +25,14 @@ import {CdkDragDropOverviewExample} from './app/cdk-drag-drop-overview-example';
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    AppRoutingModule,
   ],
   entryComponents: [CdkDragDropOverviewExample],
-  declarations: [CdkDragDropOverviewExample],
+  declarations: [
+                  CdkDragDropOverviewExample,
+                  DragDropBasicComponent,
+                  DragDropOrderedListComponent],
+
   bootstrap: [CdkDragDropOverviewExample],
   providers: []
 })
